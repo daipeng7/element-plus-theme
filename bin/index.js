@@ -1,7 +1,8 @@
+#!/usr/bin/env node
 /*
  * @Author: daipeng7
  * @Date: 2021-07-22 17:14:03
- * @LastEditTime: 2021-07-23 14:20:39
+ * @LastEditTime: 2021-07-23 15:15:31
  * @LastEditors: daipeng7
  * @Description:
  */
