@@ -1,0 +1,80 @@
+{
+  "name": "@daipeng7/element-plus-theme",
+  "version": "1.0.0",
+  "description": "It is al tool for element-plus theme.",
+  "author": "daipeng7",
+  "license": "ISC",
+  "keywords": [
+    "element-plus",
+    "theme",
+    "tool"
+  ],
+  "bin": {
+    "element-plus-theme": "./bin/index.js",
+    "ept": "./bin/index.js"
+  },
+  "main": "src/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daipeng7/element-plus-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daipeng7/element-plus-theme/issues"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "homepage": "https://github.com/daipeng7/element-plus-theme#readme",
+  "scripts": {
+    "lint": "eslint src",
+    "fix": "npm run lint --fix",
+    "test": "jest",
+    "test:c": "jest --coverage",
+    "x": "npm --no-git-tag-version version major",
+    "y": "npm --no-git-tag-version version minor",
+    "z": "npm --no-git-tag-version version patch",
+    "pub": "npm publish --access=public",
+    "pub:x": "npm run x && npm publish --access=public",
+    "pub:y": "npm run y && npm publish --access=public",
+    "pub:z": "npm run z && npm publish --access=public",
+    "changelog": "standard-version",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "commander": "^8.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "ora": "^5.4.1",
+    "sass": "^1.35.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "eslint": "^7.28.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "fs-extra": "^10.0.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
+    "lint-staged": "10.0.7",
+    "standard-version": "^9.3.0"
+  },
+  "peerDependencies": {
+    "element-plus": "^1.0.2-beta.55"
+  },
+  "lint-staged": {
+    "src/*.{js}": [
+      "npm run lint"
+    ]
+  }
+}
