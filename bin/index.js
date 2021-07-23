@@ -2,7 +2,7 @@
 /*
  * @Author: daipeng7
  * @Date: 2021-07-22 17:14:03
- * @LastEditTime: 2021-07-23 15:15:31
+ * @LastEditTime: 2021-07-23 15:24:22
  * @LastEditors: daipeng7
  * @Description:
  */
@@ -17,8 +17,7 @@ const config = {
 	projectSourcePath: '',
 	outPath: path.resolve(cwd, 'element-theme'),
 	minimize: false,
-	watch: false,
-	browsers: ['ie > 9', 'last 2 versions']
+	watch: false
 };
 
 console.log();
@@ -27,7 +26,6 @@ program.version(require('../package.json').version)
 	.option('-w --watch', 'watch variable changes then build')
 	.option('-o --out [outPath]', 'output path', function (out) { config.outPath = out; })
 	.option('-m --minimize', 'compressed file', function (minimize) { config.minimize = minimize !== false; })
-	.option('-b --browsers <items>', 'set browsers', function (browsers) { config.browsers = browsers.split(','); })
 	.parse(process.argv);
 
 const options = program.opts();

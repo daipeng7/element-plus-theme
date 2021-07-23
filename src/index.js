@@ -1,7 +1,7 @@
 /*
  * @Author: daipeng7
  * @Date: 2021-07-23 09:15:20
- * @LastEditTime: 2021-07-23 14:45:08
+ * @LastEditTime: 2021-07-23 15:24:14
  * @LastEditors: daipeng7
  * @Description:
  */
@@ -20,7 +20,7 @@ function compile(config) {
 	const spinner = ora('build element theme').start();
 	return src(path.resolve(config.projectSourcePath, '*.scss'))
 		.pipe(sass.sync())
-		.pipe(autoprefixer({ cascade: false, browsers: config.browsers }))
+		.pipe(autoprefixer({ cascade: false }))
 		.pipe(cssmin())
 		.pipe(rename(function (path) {
 			if (!noElPrefixFile.test(path.basename)) {

@@ -25,7 +25,6 @@ ept -o ./src/style/element-plus
 -w --watch             watch variable changes then build
 -o --out [outPath]     output path
 -m --minimize          compressed file
--b --browsers <items>  set browsers
 -h, --help             display help for command
 
 ```
